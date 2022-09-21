@@ -19,41 +19,40 @@
 </head>
 
 <body>
-    <!--Шапка-->
     <header>
-   <div class="conteiner main-nav">
-        <nav class="main-nav">
-      <a href class="title-header main-nav"><span class="title-link"> Web</span>Studio</a>
-     <ul class="auth main-nav">
-      <li class="item"><a href class="link">Студія</a></li>
-        <li class="item"><a href="./portfolio.html" class="link">Портфоліо</a></li>
-      <li class="item"><a href class="link">Контакти</a></li>
-       </ul>
-       </nav>
-       <ul class="contact main-nav">
-       <li class="contact-item">
-        <a href ="mailto:info@devstudio.com" class="contact-link">
-            <svg class="header-symbol">
-                <use href="./image/icons.svg/symbol----defs.svg#icon-envelope"></use>
-            </svg>
-            info@devstudio.com
-        </a>
-        </li>
-       <li class="contact-item">
-        <a href class="contact-link" tel:+38096111111>
-        <svg class="header-svg">
-            <use href="./image/icons.svg/symbol----defs.svg#icon-vector"></use>
-        </svg>
-        +38 096 111 11 11</a>
-    </li>
-        </ul>
-    </div>
+        <div class="conteiner main-nav">
+            <nav class="main-nav">
+                <a href class="title-header main-nav"><span class="title-link"> Web</span>Studio</a>
+                <ul class="auth">
+                    <li class="item"><a href class="link current">Студія</a></li>
+                    <li class="item"><a href="./portfolio.html" class="link">Портфоліо</a></li>
+                    <li class="item"><a href class="link">Контакти</a></li>
+                </ul>
+            </nav>
+            <ul class="contact main-nav">
+                <li class="contact-item">
+                    <a href="mailto:info@devstudio.com" class="contact-link">
+                        <svg class="header-symbol">
+                            <use href="./image/icons.svg/symbol----defs.svg#icon-envelope"></use>
+                        </svg>
+                        info@devstudio.com
+                    </a>
+                </li>
+                <li class="contact-item">
+                    <a href class="contact-link" tel:+38096111111>
+                        <svg class="header-svg">
+                            <use href="./image/icons.svg/symbol----defs.svg#icon-vector"></use>
+                        </svg>
+                        +38 096 111 11 11</a>
+                </li>
+            </ul>
+        </div>
     </header>
     <main>
         <!--Секція 1-->
         <section class="hero">
             <h2 class="hero-title">ЕФЕКТИВНІ РІШЕННЯ ДЛЯ <br> ВАШОГО БІЗНЕСУ</h2>
-            <button type class="button">Замовити послугу</button>
+            <button data-modal-open type class="button">Замовити послугу</button>
         </section>
         <!--Секція 2-->
         <section class="section">
@@ -77,11 +76,27 @@
                 </li>
             </ul>
             <h3 class="title-image">Чим ми займаємося</h3>
+            <div class="product-thumb">
             <ul class="portfolio">
-                <li class="photo-portfolio"><img class="image-style" src="./image/img-4.jpg" alt="набирає текст на клавіатурі" width="370" height="294"></li>
-                <li class="photo-portfolio"><img class="image-style" src="./image/img-2-2.jpg" alt="тримає телефон в руках" width="370" height="294"></li>
-                <li class="photo-portfolio"><img class="image-style" src="./image/img-3-2.jpg" alt="тримає плантшет в руках" width="370" height="294"></li>
+                <li class="photo-portfolio">
+                    <img class="image-style" src="./image/img-4.jpg" alt="набирає текст на клавіатурі" width="370" height="294">
+                    <div>
+                    <p class="product-style">Десктопні додатки<p>
+                    </div>
+                </li>
+                <li class="photo-portfolio"><img class="image-style" src="./image/img-2-2.jpg" alt="тримає телефон в руках" width="370" height="294">
+                    <div>
+                        <p class="product-style">Мобільні додатки<p>
+                        </div>
+                </li>
+                <li class="photo-portfolio"><img class="image-style" src="./image/img-3-2.jpg" alt="тримає плантшет в руках" width="370" height="294">
+                    <div>
+                        <p class="product-style">Дизайнерські рішення
+                        </p>
+                        </div>
+                </li>
             </ul>
+            </div>
             </div>
 
         </section>
@@ -340,7 +355,17 @@
             </div>
         </div>
     </footer>
-
+        <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+                <button class="modal-button" data-modal-close>
+                    <svg class="modal-icon">
+                        <use class="modal-svg"  href="./image/icons.svg/symbol-----defs.svg#icon-vector-4"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <script src="./modal.js"></script>
+        
 </body>
 
 </html>
